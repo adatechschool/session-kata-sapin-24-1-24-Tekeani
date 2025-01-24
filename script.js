@@ -1,10 +1,10 @@
+let ligne =""
+
 function afficherEtoiles(n) {
-    let ligne =""
     for (let i = 0; i < n; i++) {
         ligne += "*"
     }
-    ligne += "\\"
-    console.log(ligne)
+    // ligne += "\\"
 }
 
 
@@ -17,21 +17,28 @@ function afficherRectangle(hauteur, largeur) {
 // afficherRectangle(5, 5)
 
 
-function afficherTriangleDroite(n) {
-    for (let i = 0; i <= n; i++) {
-        afficherEtoiles(i)
-    }
-}
-
-afficherTriangleDroite (5)
-
-
-
-// function afficherTriangleGauche(n) {
-//     ligne += "/" 
-//     for (let i = 0; i <= n; i++) {
+// function afficherTriangleDroite(n) {
+//     ligne = ""
+//     for (let i = 0; i <= n; i ++) {
 //         afficherEtoiles(i)
+//         console.log(ligne + "\\")
+//         ligne = ""
 //     }
-//   }
+    
+// }
 
-// afficherTriangleGauche(5)
+// afficherTriangleDroite (5)
+
+
+
+function afficherTriangleGauche(n) {
+    ligne = "" 
+    for (let i = 0; i <= n; i++) {
+        let espace =" ".repeat(n - i)
+        afficherEtoiles(i)
+        console.log(espace + "/" + ligne)
+        ligne = ""
+    }
+  }
+
+afficherTriangleGauche(5)
