@@ -17,15 +17,15 @@ function afficherRectangle(hauteur, largeur) {
 // afficherRectangle(5, 5)
 
 
-// function afficherTriangleDroite(n) {
-//     ligne = ""
-//     for (let i = 0; i <= n; i ++) {
-//         afficherEtoiles(i)
-//         console.log(ligne + "\\")
-//         ligne = ""
-//     }
+function afficherTriangleDroite(n) {
+    ligne = ""
+    for (let i = 0; i <= n; i ++) {
+        afficherEtoiles(i)
+        console.log(ligne + "\\")
+        ligne = ""
+    }
     
-// }
+}
 
 // afficherTriangleDroite (5)
 
@@ -41,4 +41,14 @@ function afficherTriangleGauche(n) {
     }
   }
 
-afficherTriangleGauche(5)
+// afficherTriangleGauche(5)
+
+
+function afficherPointeSapin(n) {
+    console.log(" " .repeat(n - 1) + "*")
+    afficherTriangleGauche(n)
+    afficherTriangleDroite(n)
+    console.log(" " .repeat(n - 1) + "|")
+}
+
+afficherPointeSapin(5);
